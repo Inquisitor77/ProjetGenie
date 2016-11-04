@@ -15,14 +15,21 @@ to analyse are provided. Theses pictures will help you in identifying the Spoon 
 have been produced using the following tool that extract a dot file from Java code: https://github.com/bbaudry/
 ASTViewer/tree/master. You can then use an online tool (http://www.webgraphviz.com/), or Graphviz on Linux
 (http://www.linuxfocus.org/English/August2005/article387.meta.shtml) to produce png files.
+
 Q1. Code a processor for detecting unit tests (i.e. public void test*() operations) not annotated with the @test annotation.
+
 Q2. Add to the processor a method that refactors the code affected by this bug.
+
 Q3. Code a rule for detecting unit tests that contain a try/catch block.
+
 Q4. Improve this last rule for detecting unit tests that contain a try/catch block where the catch block contains a fail
 method call, for instance:
+
+```java
 	@Test public void testFoo( ) {
 	try {
 		...
 	} catch (...) { fail(); }
 	}
+```
 Q5. Add to the processor a method that refactor the code affected by this bug. This means that the exception must be thrown be the method.
