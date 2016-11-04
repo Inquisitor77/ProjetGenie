@@ -49,14 +49,14 @@ public class TestAnalyzer {
         assertEquals(1, proc.getDoubleFors().size());
     }
 
-//	@Test
-//	public void testNoAnnot() {
-//		NoTestAnnot proc = new NoTestAnnot();
-//		spoon.addProcessor(proc);
-//		spoon.addInputResource("src/test/resources/java/testannot/TestNoTestAnnot.java");
-//		spoon.run();
-//		assertEquals(1, proc.getFaultyMethods().size());
-//	}
+	@Test
+	public void testNoAnnot() {
+		NoTestAnnot proc = new NoTestAnnot();
+		spoon.addProcessor(proc);
+		spoon.addInputResource("src/test/resources/java/testannot/TestNoTestAnnot.java");
+		spoon.run();
+		assertEquals(1, proc.getFaultyMethods().size());
+	}
 
 //	@Test
 //	public void testNoAnnotRefactor() throws IOException {
