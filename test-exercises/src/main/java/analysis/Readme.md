@@ -10,11 +10,8 @@ remove these bad coding practices. A first toy processor that detects double for
 Practical session
 ===
 
-A Maven project is available on Moodle. Import it into IntelliJ. Pictures of the abstract syntax tree (AST) of the code
-to analyse are provided. Theses pictures will help you in identifying the Spoon classes to use. Theses pictures
-have been produced using the following tool that extract a dot file from Java code: https://github.com/bbaudry/
-ASTViewer/tree/master. You can then use an online tool (http://www.webgraphviz.com/), or Graphviz on Linux
-(http://www.linuxfocus.org/English/August2005/article387.meta.shtml) to produce png files.
+ Pictures of the abstract syntax tree (AST) of the code
+to analyse are provided here: https://github.com/VANDV-M2-ISTIC-2016/Exercises/tree/master/test-exercises/src/test/resources/java/testannot. Theses pictures will help you in identifying the Spoon classes to use. 
 
 Q1. Code a processor for detecting unit tests (i.e. public void test*() operations) not annotated with the @test annotation.
 
