@@ -12,12 +12,13 @@ public class DoubleFor extends AbstractProcessor<CtFor> {
     final List<CtFor> fors = new ArrayList<CtFor>();
 
     public void process(final CtFor forloop) {
-        if(!forloop.getElements(new AbstractFilter<CtFor>() {
+        AbstractFilter<CtFor> filter = new AbstractFilter<CtFor>() {
             @Override
             public boolean matches(final CtFor element) {
                 return forloop!=element;
             }
-        }).isEmpty()) {
+        };
+        if(!forloop.getElements(filter).isEmpty()) {
             fors.add(forloop);
         }
     }
